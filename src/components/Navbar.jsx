@@ -1,6 +1,5 @@
 import React from 'react';
 import { ShoppingCart } from 'lucide-react';
-import { useCart } from '../context/CartContext';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
