@@ -1,8 +1,10 @@
 import React from 'react';
-import { Eye } from 'lucide-react';
+import { useCart } from '../context/CartContext';
+import { ShoppingCart, Eye } from 'lucide-react';
 import { Link } from 'react-router-dom';
 
 const ProductCard = ({ product }) => {
+  const { addToCart } = useCart();
 
   return (
     <div className="bg-white rounded-lg overflow-hidden shadow-md hover:shadow-lg transition-shadow duration-300">
@@ -20,6 +22,13 @@ const ProductCard = ({ product }) => {
           >
             <Eye size={20} />
           </Link>
+          <button 
+            onClick={() => addToCart(product)} 
+            className="bg-blue-700 text-white p-2 rounded-full hover:bg-blue-800 transition-colors duration-300"
+            title="Add to cart"
+          >
+            <ShoppingCart size={20} />
+          </button>
         </div>
       </div>
       <div className="p-4">
@@ -27,6 +36,12 @@ const ProductCard = ({ product }) => {
         <h3 className="text-lg font-semibold mt-1 text-gray-800">{product.name}</h3>
         <div className="mt-2 flex justify-between items-center">
           <p className="font-bold text-lg">${product.price.toFixed(2)}</p>
+          <button 
+            onClick={() => addToCart(product)}
+            className="text-sm px-3 py-1 bg-blue-700 text-white rounded hover:bg-blue-800 transition-colors duration-300"
+          >
+            Add to Cart
+          </button>
         </div>
       </div>
     </div>
