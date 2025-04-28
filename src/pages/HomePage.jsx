@@ -23,6 +23,9 @@ const HomePage = () => {
           </div>
         </div>
       </div>
+      <div id="products">
+        <ProductList products={products} />
+      </div>
     </div>
   );
 };
