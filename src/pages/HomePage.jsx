@@ -1,6 +1,4 @@
 import React from 'react';
-import ProductList from '../components/ProductList';
-import { products } from '../data/products';
 
 const HomePage = () => {
   return (
@@ -24,10 +22,6 @@ const HomePage = () => {
             </div>
           </div>
         </div>
-      </div>
-
-      <div id="products">
-        <ProductList products={products} />
       </div>
     </div>
   );
