@@ -1,5 +1,6 @@
 import React from 'react';
-
+import ProductList from '../components/ProductList';
+import { products } from '../data/products';
 const HomePage = () => {
   return (
     <div className="min-h-screen bg-gray-50">
@@ -22,6 +23,9 @@ const HomePage = () => {
             </div>
           </div>
         </div>
+      </div>
+      <div id="products">
+        <ProductList products={products} />
       </div>
     </div>
   );
