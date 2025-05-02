@@ -1,5 +1,6 @@
 import React from 'react';
 import { ShoppingCart } from 'lucide-react';
+import { useCart } from '../context/CartContext';
 import { Link, useLocation } from 'react-router-dom';
 
 const Navbar = () => {
@@ -16,7 +17,7 @@ const Navbar = () => {
             </Link>
             <div className="ml-10 flex items-baseline space-x-4">
               <Link 
-                to="/" 
+                to="/#products" 
                 className={`px-3 py-2 rounded-md text-sm font-medium ${
                   location.pathname === '/' ? 'text-blue-700' : 'text-gray-600 hover:text-blue-700'
                 }`}
