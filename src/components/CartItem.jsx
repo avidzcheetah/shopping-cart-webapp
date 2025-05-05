@@ -1,47 +1,6 @@
 import React from 'react';
 import { Minus, Plus, Trash2 } from 'lucide-react';
 import { useCart } from '../context/CartContext';
-const CartItemSkeleton = () => (
-  <div className="flex flex-col sm:flex-row items-start sm:items-center py-4 border-b border-gray-200 animate-pulse">
-    <div className="w-24 h-24 bg-gray-200 rounded-md mr-4 mb-4 sm:mb-0" />
-    <div className="flex-1">
-      <div className="h-6 bg-gray-200 rounded w-3/4 mb-2" />
-      <div className="h-4 bg-gray-200 rounded w-1/2 mb-2" />
-      <div className="h-5 bg-gray-200 rounded w-1/4" />
-    </div>
-    <div className="mt-4 sm:mt-0">
-      <div className="h-10 w-32 bg-gray-200 rounded-md" />
-    </div>
-    <div className="mt-4 sm:mt-0 ml-0 sm:ml-8">
-      <div className="h-6 w-20 bg-gray-200 rounded" />
-    </div>
-  </div>
-);
-
-const CartItemError = ({ onRetry }) => (
-  <div className="flex items-center justify-between p-4 bg-red-50 border border-red-200 rounded-md">
-    <p className="text-red-600">Failed to load cart item</p>
-    <button 
-      onClick={onRetry}
-      className="px-4 py-2 text-sm font-medium text-red-600 hover:text-red-700 focus:outline-none"
-    >
-      Retry
-    </button>
-  </div>
-);
-
-const QuantityBadge = ({ quantity }) => (
-  <span className="inline-flex items-center px-2.5 py-0.5 rounded-full text-xs font-medium bg-blue-100 text-blue-800">
-    Qty: {quantity}
-  </span>
-);
-
-const PriceTag = ({ price }) => (
-  <div className="flex items-center text-lg font-semibold text-gray-900">
-    <span className="text-sm font-normal text-gray-500 mr-1">$</span>
-    {price.toFixed(2)}
-  </div>
-);
 
 const CartItem = ({ item }) => {
   const { updateQuantity, removeFromCart } = useCart();
