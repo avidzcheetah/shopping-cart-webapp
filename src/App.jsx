@@ -7,16 +7,15 @@ import CartPage from './pages/CartPage';
 import ProductDetailPage from './pages/ProductDetailPage';
 import CheckoutPage from './pages/CheckoutPage';
 
-
 function App() {
   return (
     <CartProvider>
       <Router>
-      <div className="min-h-screen bg-gray-50">
-      <Navbar />
+        <div className="min-h-screen bg-gray-50">
+          <Navbar />
           <main>
             <Routes>
-            <Route path="/" element={<HomePage />} />
+              <Route path="/" element={<HomePage />} />
               <Route path="/cart" element={<CartPage />} />
               <Route path="/product/:id" element={<ProductDetailPage />} />
               <Route path="/checkout" element={<CheckoutPage />} />
