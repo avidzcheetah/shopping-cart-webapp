@@ -74,10 +74,10 @@ root/
 
 This project was developed as a part of the **IT 3301 / CS 3301 - Web Technologies** module to demonstrate key web development concepts such as:
 
-- Single Page Applications (SPA)
-- RESTful API integration
-- State management using React Context
-- Full-stack deployment (MongoDB + Express + React)
+- HTML
+- CSS
+- JavaScript
+- Database
 
 ---
 
